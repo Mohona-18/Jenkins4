@@ -1,7 +1,7 @@
 pipeline {
-  agent any
+  agent { label "12Sept-Node" }
   stages {
-    stage("Installations") {
+    stage("Stage 1") {
       steps {
         sh '''
           echo "Hello World"
