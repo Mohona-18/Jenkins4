@@ -1,5 +1,5 @@
 pipeline {
-  agent { label "12Sept-Node" }
+  agent any
   stages {
     stage ("Check Installations"){
       steps{
@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh '''
           echo "Hello World"
-          ifconfig
+          docker --version
           echo "Done for the Day"
         '''
       }
